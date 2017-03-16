@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Labb 3</title>
+	<link href="bower_components/bootstrap-css-only/css/bootstrap.css" type="text/css" rel="stylesheet" />
+	<link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4">
+					<a href="#">Name</a>
+				</div>
+				<div class="col-xs-4">
+					<a href="#!/cities">Cities</a>
+				</div>
+				<div class="col-xs-4">
+					<a href="#!/list">SSN</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<main>
+		<ng-view></ng-view>
+	</main>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<p>Izabella</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/chart.js/dist/Chart.js"></script> 
+	<script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>

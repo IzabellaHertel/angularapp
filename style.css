@@ -1,0 +1,60 @@
+main {
+	min-height: 400px;
+}
+
+header, footer {
+	height: 100px;
+	background-color: #0f9d58;
+	box-shadow: 0 0 3px #555;
+}
+
+header a, footer p {
+	line-height: 100px;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	margin: 0 auto;
+}
+
+header a:hover, header a:focus, header a:active {
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+}
+
+section {
+	margin: 30px 0;
+}
+
+.giant {
+	height: 70px;
+	width: 250px;
+	line-height: 70px;
+	padding: 0;
+	text-align: center;
+	font-size: 20px;
+	text-transform: uppercase;
+	margin: 0;
+	border-radius: 10px;
+}
+
+.center {
+	margin: 0 auto;
+	text-align: center;
+}
+
+h2 {
+	color: #ff3d00;
+}
+
+.error-message {
+	color: #f44336;
+}
+
+input.ng-valid {
+	background-color: #dcedc8;
+}
+
+input.ng-invalid {
+	background-color: #ffcdd2;
+}

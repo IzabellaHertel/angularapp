@@ -1,0 +1,26 @@
+<section ng-controller="cityController">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h2 class="text-center">{{ $root.name | capitalize}} Here is a chart of cities.</h2>
+				<canvas class="chart chart-bar" chart-data="population" chart-labels="name" chart-series="series"></canvas>
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<form>
+					<label for="cityName">Name of the city</label>
+					<input type="text" ng-model="addCityName" name="cityName" />
+					<label for="cityPopulation">Population of the city</label>
+					<input type="number" ng-model="addCityPopulation" name="cityPopulation" />
+					<input type="button" class="btn btn-success" ng-click="addCity()" value="add city" />
+				</form>
+				<p class="error-message" ng-if="errorMessage">You have to apply a value to both fields.</p>
+			</div>
+		</div>
+	</div>
+</section>
