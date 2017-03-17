@@ -182,20 +182,6 @@ app.directive('validateSsn', ['$rootScope', 'ssnFactory', function($rootScope, s
 	};
 }]);
 
- app.directive('domDirective', [function () {
-	  return {
-		  restrict: 'A',
-		  link: function ($scope, element, attrs) {
-			  element.on('mouseenter', function () {
-				  element.css('background-color', 'yellow');
-			  });
-			  element.on('mouseleave', function () {
-				  element.css('background-color', 'white');
-			  });
-		  }
-	  };
-}]);
-
 app.controller('cityController', ['$scope', '$http', '$rootScope', 'cityFactory', function($scope, $http, $rootScope, cityFactory){
 	$scope.name = cityFactory.getName();
 	$scope.population = cityFactory.getPopulation();
@@ -217,12 +203,6 @@ app.controller('ssnController', ['$scope', '$rootScope', 'ssnFactory', function(
 	$scope.isLeapYear = ssnFactory.isLeapYear;
 	$scope.validSsn = ssnFactory.validSsn;
 	$scope.age = ssnFactory.age;
-
-	$scope.correctInput = function (ssn){
-		if (ssn != undefined) {
-			return /^\d{6}\-\d{4}$/.test(ssn);
-		}
-	};
 }]);
 
 app.controller('homeController', ['$scope', '$rootScope', function($scope, $rootScope){

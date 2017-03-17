@@ -2,11 +2,11 @@
 	<div class="container">
 	 	<div class="row">
 	 		<div class="col-xs-12">
-	 			Hello {{ name | capitalize }}
+	 			<p>Hello {{ name | capitalize }}</p>
 	 			<form name="testSsn" novalidate>
 		 			<label for="ssn">Enter your social security number 'YYMMDD-XXXX'</label>
 		 			<input type="text" name="ssn" ng-model="ssn" required validate-ssn ng-pattern="/^\d{6}\-\d{4}$/" ng-change="show=false" />
-		 			<input type="button" class="btn btn-primary" ng-disabled="!validSsn(ssn); !correctInput(ssn)" value="check" ng-click="show=true; yourAge=age(ssn)">
+		 			<input type="button" class="btn btn-primary" ng-disabled="!validSsn(ssn)" value="check" ng-click="show=true; yourAge=age(ssn)">
 	 			</form>
 	 			<p ng-if="testSsn.$valid && show">You are {{ yourAge }} years old.</p>
 	 		</div>

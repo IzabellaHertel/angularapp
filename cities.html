@@ -2,7 +2,6 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<h2 class="text-center">{{ $root.name | capitalize}} Here is a chart of cities.</h2>
 				<canvas class="chart chart-bar" chart-data="population" chart-labels="name" chart-series="series"></canvas>
 			</div>
 		</div>
@@ -12,7 +11,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<form>
+				<p class="info-message">{{ $root.name }} if you want to add a new city, just enter it here.</p>
+				<form name="addNewCity" novalidate>
 					<label for="cityName">Name of the city</label>
 					<input type="text" ng-model="addCityName" name="cityName" />
 					<label for="cityPopulation">Population of the city</label>

@@ -58,3 +58,15 @@ input.ng-valid {
 input.ng-invalid {
 	background-color: #ffcdd2;
 }
+
+.info-message {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #333;
+	font-size: 12px;
+}
+
+p {
+	color: #333;
+	font-size: 20px;
+}
