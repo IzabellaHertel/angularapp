@@ -20,10 +20,10 @@ app.factory('ssnFactory', [function () {
 	var day = today.getDate();
 	return {
 		isLeapYear: function(_year){
-			return ((_year % 4 == 0) && (_year % 100 != 0)) || (_year % 400 == 0);
+			return ((_year % 4 === 0) && (_year % 100 !== 0)) || (_year % 400 === 0);
 		},
 		age: function(ssn){
-			if (ssn != undefined) {
+			if (ssn !== undefined) {
 				var birthYear = Number(ssn.slice(0,2));
 				var thisYear = Number(year.toString().slice(2));
 				if (birthYear < 10){
@@ -47,7 +47,7 @@ app.factory('ssnFactory', [function () {
 			}
 		},
 		validSsn: function(ssn){
-			if (ssn != undefined) {
+			if (ssn !== undefined) {
 
 				var birthYear = ssn.slice(0,2);
 				var thisYear = year.toString();
@@ -126,7 +126,7 @@ app.factory('ssnFactory', [function () {
 				}
 			}
 		}
-	}
+	};
 }]);
 
 app.factory('cityFactory', ['$http', function($http) {
@@ -157,7 +157,7 @@ app.factory('cityFactory', ['$http', function($http) {
 		getPopulation: function() {
 			return population;
 		}
-	}
+	};
 }]);
 
 app.run(['$rootScope', function($rootScope){
@@ -208,6 +208,7 @@ app.controller('ssnController', ['$scope', '$rootScope', 'ssnFactory', function(
 app.controller('homeController', ['$scope', '$rootScope', function($scope, $rootScope){
 	$scope.addName = function(){
 		$rootScope.name = $scope.whatsYourName;
+		$rootScope.age = $scope.howOldAreYou;
 		$scope.whatsYourName = '';
 	};
 }]);
