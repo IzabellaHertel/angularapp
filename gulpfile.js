@@ -11,10 +11,10 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('uglify', function() {
-    return gulp.src('*.js')
+    return gulp.src('script.js')
         .pipe(concat('concat.js'))
         .pipe(gulp.dest('dist'))
-        .pipe(rename('script.js'))
+        .pipe(rename('script.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist'));
 });
